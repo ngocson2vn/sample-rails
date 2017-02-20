@@ -1,0 +1,1274 @@
+Started GET "/" for 127.0.0.1 at 2016-12-11 16:56:24 +0900
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /usr/lib64/ruby/gems/2.3.0/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /usr/lib64/ruby/gems/2.3.0/gems/railties-5.0.0.1/lib/rails/templates/rails/welcome/index.html.erb (3.6ms)
+Completed 200 OK in 41ms (Views: 7.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2016-12-11 17:11:44 +0900
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 3ms (Views: 3.0ms | ActiveRecord: 0.0ms)
+
+
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.6ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170215062511)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170215062511"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-15 06:26:22 UTC], ["updated_at", 2017-02-15 06:26:22 UTC]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170215063804)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170215063804)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (3.3ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170215063804"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.7ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-02-15 15:53:40 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 25ms (Views: 12.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-15 15:53:45 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (33.8ms)
+  Rendered users/new.html.erb within layouts/application (43.1ms)
+Completed 200 OK in 753ms (Views: 722.8ms | ActiveRecord: 1.1ms)
+
+
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170215063804)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.7ms)[0m  [1m[35mDROP TABLE "users"[0m
+  [1m[35m (0.1ms)[0m  [1m[31mrollback transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Migrating to CreateUsers (20170215063804)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170215063804"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", :environment], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", 2017-02-15 07:18:04 UTC], ["updated_at", 2017-02-15 07:18:04 UTC]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.1ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Started GET "/" for ::1 at 2017-02-15 16:21:55 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 24ms (Views: 13.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-15 16:22:03 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (35.3ms)
+  Rendered users/new.html.erb within layouts/application (41.4ms)
+Completed 200 OK in 397ms (Views: 379.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for ::1 at 2017-02-15 16:24:12 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 54ms (Views: 48.9ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/" for ::1 at 2017-02-15 18:48:31 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 27ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-15 18:48:38 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 356ms (Views: 336.7ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-16 23:21:37 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.1ms)
+Completed 200 OK in 26ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-16 23:21:43 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 583ms (Views: 572.1ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-16 23:21:50 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (37.9ms)
+  Rendered users/new.html.erb within layouts/application (47.3ms)
+Completed 200 OK in 101ms (Views: 87.0ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2017-02-16 23:22:01 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"7zNlMQUifwdiL+b/HjGj2XAzbMVQPuHb/ijJrEIcIr5i0XOxbrDB8YEyWe/9A+88jKYAjg28w4FtpHbgRczyIQ==", "user"=>{"name"=>"Son", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-16 23:24:36 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 200 OK in 32ms (Views: 29.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-16 23:24:37 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.2ms)
+  Rendered users/new.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 57ms (Views: 55.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-16 23:24:44 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ihn2dmOfzQhiFDRBdOqUNnCLhR5InAlAUwU+rlKqfBQH++D2CA1z/oEJi1GX2NjTjB7pVRUeKxrAiYHiVXqsiw==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-16 23:25:26 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 31ms (Views: 28.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-16 23:25:29 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.5ms)
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 88ms (Views: 84.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-16 23:25:35 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"PSWu2w0BQNQ1oVkcRLpEsWXe7fPSGwZIluPwlPi6ZFKwx7hbZpP+Ita85gyniAhUmUuBuI+ZJBIFb0/Y/2q0zQ==", "user"=>{"name"=>"Son", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-16 23:33:18 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.5ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.5ms)
+Completed 200 OK in 443ms (Views: 414.1ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-16 23:33:21 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (53.0ms)
+  Rendered users/new.html.erb within layouts/application (59.3ms)
+Completed 200 OK in 99ms (Views: 86.1ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2017-02-16 23:33:25 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VUMHjEYseoVJmuE6QWzMTPOKrBdDCd3i0GMnFOh+uzbYoREMLb7Ec6qHXiqiXoCpDx/AXB6L/7hD75hY765rqQ==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for ::1 at 2017-02-17 14:19:05 +0900
+Started GET "/" for ::1 at 2017-02-17 14:19:05 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#hello as HTML
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendering html template
+  Rendered html template (0.0ms)
+  Rendered html template (0.0ms)
+Completed 200 OK in 29ms (Views: 15.0ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 14:19:13 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 385ms (Views: 372.5ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 14:19:16 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (45.1ms)
+  Rendered users/new.html.erb within layouts/application (51.0ms)
+Completed 200 OK in 89ms (Views: 76.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 14:19:25 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"fOqK9KJsfM58mJ06/58uukO9JGY6cLDpcMokweuKrwrxCJx0yf7COJ+FIiocrWJfvyhILWfykrPjRpuN7Fp/lQ==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 16:10:08 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 79ms (Views: 72.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 16:10:13 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.5ms)
+  Rendered users/new.html.erb within layouts/application (10.0ms)
+Completed 200 OK in 46ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 16:10:17 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"kz48DZDYNdZd6Dxvu+gzxFLzh6aNQxcKLBJSfPR6qYAe3CqN+0qLIL71g39Y2n8hrmbr7dDBNVC/nu0w86p5Hw==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 16:21:29 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 393ms (Views: 366.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 16:21:37 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (43.5ms)
+  Rendered users/new.html.erb within layouts/application (46.5ms)
+Completed 200 OK in 80ms (Views: 68.3ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 16:21:41 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"2tRk45SyMhZaMHB1nWxKGPmAufYuqsFbvRMPenxFpLhXNnJj/yCM4Lktz2V+Xgb9BRXVvXMo4wEun7A2e5V0Jw==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 16:25:20 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 40ms (Views: 37.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 16:25:21 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.7ms)
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 50ms (Views: 47.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 16:25:24 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"io4Y5oGkNIFbO7sAYylwTcuRf2zVD5/drM4sjnierhEHbA5m6jaKd7gmBBCAGzyoNwQTJ4iNvYc/QpPCf05+jg==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 16:27:06 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 26ms (Views: 24.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 16:27:12 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.3ms)
+  Rendered users/new.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 43ms (Views: 40.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 16:27:15 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xAZUUwIW6X8hWCGqAUfuqMT5rsrTaYj2H6uqrxBpclJJ5ELTaYRXicJFnrridaJNOGzCgY7rqqyMJxXjF7mizQ==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 16:27:43 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 26ms (Views: 23.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 16:27:47 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.1ms)
+  Rendered users/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 64ms (Views: 60.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 16:27:56 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"RyjN5gnhNOS/E2L+03xX6lgRYH0WkG2QlpdPJqA38VTKyttmYnOKElwO3e4wThsPpIQMNksST8oFG/Bqp+chyw==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 16:29:27 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 38ms (Views: 34.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 16:29:28 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 52ms (Views: 49.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 16:29:31 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3REiuZpYplXue6IuO+ZFBlVydKa15ZR/mdFO11JRdOtQ8zQ58coYow1mHT7Y1AnjqecY7ehntiUKXfGbVYGkdA==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 16:31:51 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 43ms (Views: 39.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 16:31:53 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 48ms (Views: 46.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 16:31:56 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Dx7uhb8+tsPPrWYTnVzA/1CH2eGAF3ZbG5yQfKDMzaWC/PgF1KwINSyw2QN+bowarBK1qt2VVAGIEC8wpxwdOg==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 16:32:11 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 24ms (Views: 22.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 16:32:12 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/new.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 52ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 16:32:15 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"C4AaqQo3yz35NMYapsAHHKEW378XkNR8a+9TlThCaXaGYgwpYaV1yxopeQpF8kv5XYOz9EoS9ib4Y+zZP5K56Q==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 16:36:40 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 319ms (Views: 304.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 16:36:42 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (24.3ms)
+  Rendered users/new.html.erb within layouts/application (27.9ms)
+Completed 200 OK in 73ms (Views: 63.5ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 16:36:45 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NjRJUJFrsFqZybD8DJhHCK7Vm01S467jwFP2AzWJ7Fy71l/Q+vkOrHrUD+zvqgvtUkD3Bg9hjLlT30lPMlk8ww==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 17:05:10 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (18.8ms)
+Completed 200 OK in 403ms (Views: 378.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 17:05:12 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (38.1ms)
+  Rendered users/new.html.erb within layouts/application (45.1ms)
+Completed 200 OK in 79ms (Views: 68.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 17:05:15 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YwRtELK1FVaSxjvYvc9k3o1lXIekFFsVpNj5b02w00Tu5nuQ2SeroHHbhMhe/Sg7cfAwzPmWeU83VEYjSmAD2w==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 17:09:32 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 65ms (Views: 60.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 17:09:33 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.2ms)
+  Rendered users/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 62ms (Views: 57.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 17:09:38 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yfdt+Xr/TnsLeN1DcD9AEdYEf8pt0bdRyEpDrnBY2bPsFXt5EW3wjehlYlOTDQz0KpETgTBTlQtbxvzid4gJLA==", "user"=>{"name"=>"Huong", "email"=>"huong@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-17 17:11:34 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 24ms (Views: 21.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 17:11:35 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.5ms)
+  Rendered users/new.html.erb within layouts/application (6.5ms)
+Completed 200 OK in 63ms (Views: 61.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 17:11:41 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"oWj3LE+OrOnyDYTzixBwrabJFskTaI0VK/YKKzMMcjcsiuGsJBwSHxEQO+NoIjxIWlx6gk7qr0+4erVnNNyiqA==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 18:51:14 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (12.8ms)
+Completed 200 OK in 406ms (Views: 382.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 18:51:16 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (52.4ms)
+  Rendered users/new.html.erb within layouts/application (59.2ms)
+Completed 200 OK in 93ms (Views: 81.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 18:51:20 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mIT1x9Y607h4Yoa7X+CLS+2+NAHjrI9F57JVOjrwjFUVZuNHvahtTpt/Oau80seuEStYSr4urR90Pup2PSBcyg==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? true
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 19:03:27 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 424ms (Views: 399.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:03:41 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (46.5ms)
+  Rendered users/new.html.erb within layouts/application (54.6ms)
+Completed 200 OK in 91ms (Views: 79.2ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 19:03:45 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"o4gEyrM6rKr6HLBbdoiQmX4TDpk2w+WDS9tTR+ZzkSguahJK2KgSXBkBD0uVutx8goZi0mtBx9nYV+wL4aNBtw==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? true
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 19:06:48 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (10.7ms)
+Completed 200 OK in 309ms (Views: 290.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:06:50 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (33.8ms)
+  Rendered users/new.html.erb within layouts/application (37.1ms)
+Completed 200 OK in 78ms (Views: 66.8ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 19:06:54 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"XdLdYY27VWAhz051Qx8nBrOwePqmsxdWBSm1CGFj6QrQMMvh5inrlsLS8WWgLWvjTyUUsfsxNQyWpQpEZrM5lQ==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? true
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 19:10:43 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 395ms (Views: 371.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:10:45 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (46.0ms)
+  Rendered users/new.html.erb within layouts/application (50.8ms)
+Completed 200 OK in 85ms (Views: 73.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 19:10:49 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NrYqZApVbGVmLG2gZyFlke9a95VWoEOh8pVvUlgqIkW7VDzkYcfSk4Ux0rCEEyl0E8+b3gsiYfthGdAeX/ry2g==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? true
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 19:12:53 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 389ms (Views: 361.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:12:55 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (45.0ms)
+  Rendered users/new.html.erb within layouts/application (53.1ms)
+Completed 200 OK in 94ms (Views: 79.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 19:12:59 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"HEFUO8n2NJTy3a8DqBGxugUPa1oSjepTnwT/nRAzGtuRo0K7omSKYhHAEBNLI/1f+ZoHEU8PyAkMiEDRF+PKRA==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? true
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 19:14:50 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.4ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (13.5ms)
+Completed 200 OK in 389ms (Views: 361.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:14:53 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (46.4ms)
+  Rendered users/new.html.erb within layouts/application (52.1ms)
+Completed 200 OK in 90ms (Views: 78.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 19:14:56 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"pj8eD2qPrOrunqX/a83lpIotrgh50pI5yCUM3UhNtEMr3QiPAR0SHA2DGu+I/6lBdrjCQyRQsGNbqbORT51k3A==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? true
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 19:17:34 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (11.3ms)
+Completed 200 OK in 288ms (Views: 273.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:17:36 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (33.0ms)
+  Rendered users/new.html.erb within layouts/application (37.0ms)
+Completed 200 OK in 78ms (Views: 68.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 19:17:39 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mjVZGRwcZYHpIBrV/fYsW4lOBAR6mPVD/Tq7Satf/NoX10+Zd47bdwo9pcUexGC+ddtoTyca1xlutgQFrI8sRQ==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? true
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 19:19:21 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.8ms)
+Completed 200 OK in 391ms (Views: 366.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:19:23 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (44.9ms)
+  Rendered users/new.html.erb within layouts/application (53.5ms)
+Completed 200 OK in 88ms (Views: 77.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 19:19:26 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"c3Bjibg0+NdRU/Kv+VeSONbMoL0cX28L5FAgtWd1/pb+knUJ06ZGIbJOTb8aZd7dKlnM9kHdTVF33J/5YKUuCQ==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Notice was not sent due to configuration:         
+  Environment Monitored? false         
+  API key set? true
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 19:20:09 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (12.9ms)
+Completed 200 OK in 279ms (Views: 265.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:20:12 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (29.9ms)
+  Rendered users/new.html.erb within layouts/application (33.1ms)
+Completed 200 OK in 72ms (Views: 62.1ms | ActiveRecord: 0.5ms)
+
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users/" for ::1 at 2017-02-17 19:21:48 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (9.9ms)
+Completed 200 OK in 265ms (Views: 250.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:21:50 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (27.3ms)
+  Rendered users/new.html.erb within layouts/application (29.6ms)
+Completed 200 OK in 73ms (Views: 62.3ms | ActiveRecord: 0.6ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 19:21:54 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bzW+6Jj03LuqM8q7gsUZBXcAz02ShYfY21d88ajOjJbi16ho82ZiTUkudath91Xgi5WjBs8HpYJI28O9rx5cCQ==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Success: Net::HTTPOK
+** [Airbrake] Environment Info: [Ruby: 2.3.1] [Rails: 5.0.0.1] [Env: staging]
+** [Airbrake] Response from Airbrake: 
+UUID: 58a6cec2d9d1af4aec0001f7
+URL:  http://errbit.finc.co.jp/locate/58a6cec2d9d1af4aec0001f7
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-17 19:23:55 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 436ms (Views: 420.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-17 19:23:57 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (36.9ms)
+  Rendered users/new.html.erb within layouts/application (40.3ms)
+Completed 200 OK in 86ms (Views: 76.0ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-02-17 19:24:00 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"iv9A88NrRgPcyvCC/KPRPU+88Y2GUFMTbc8ELwwT5yAHHVZzqPn49T/XT5IfkZ3YsymdxtvScUn+Q7tjC8M3vw==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Success: Net::HTTPOK
+** [Airbrake] Environment Info: [Ruby: 2.3.1] [Rails: 5.0.0.1] [Env: staging]
+** [Airbrake] Response from Airbrake: 
+UUID: 58a6cf40d9d1af4aef0001b6
+URL:  http://errbit.finc.co.jp/locate/58a6cf40d9d1af4aef0001b6
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/" for ::1 at 2017-02-18 16:21:53 +0900
+Started GET "/" for ::1 at 2017-02-18 16:21:54 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[36mActiveRecord::SchemaMigration Load (0.2ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by ApplicationController#hello as HTML
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendering html template
+  Rendered html template (0.1ms)
+  Rendered html template (0.0ms)
+Completed 200 OK in 29ms (Views: 15.2ms | ActiveRecord: 0.0ms)
+
+
+Completed 200 OK in 20ms (Views: 13.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-18 16:21:58 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (8.1ms)
+Started GET "/users" for ::1 at 2017-02-18 16:21:58 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 431ms (Views: 418.9ms | ActiveRecord: 1.7ms)
+
+
+Completed 200 OK in 73ms (Views: 70.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-18 16:22:00 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (53.3ms)
+  Rendered users/new.html.erb within layouts/application (58.1ms)
+Completed 200 OK in 99ms (Views: 85.7ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/users" for ::1 at 2017-02-18 16:22:04 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"bh4bZXTWw40xfKkolpwFHtbmqjM5BBVwGqw9QDYHX2vj/A3lH0R9e9JhFjh1rkn7KnPGeGSGNyqJIIIMMdeP9A==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Success: Net::HTTPOK
+** [Airbrake] Environment Info: [Ruby: 2.3.1] [Rails: 5.0.0.1] [Env: staging]
+** [Airbrake] Response from Airbrake: 
+UUID: 58a7f61cd9d1af7dc70000dd
+URL:  http://errbit.finc.co.jp/locate/58a7f61cd9d1af7dc70000dd
+Started GET "/users" for ::1 at 2017-02-18 16:36:03 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 59ms (Views: 55.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-18 16:36:05 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (6.1ms)
+  Rendered users/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 57ms (Views: 53.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-18 16:36:08 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"y+gvHQSdw90zToBVPxF4ZqWqrHUHSZR0dkCWQ8UlZNJGCjmdbw99K9BTP0XcIzSDWT/APlrLti7lzCkPwvW0TQ==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Success: Net::HTTPOK
+** [Airbrake] Environment Info: [Ruby: 2.3.1] [Rails: 5.0.0.1] [Env: staging]
+** [Airbrake] Response from Airbrake: 
+UUID: 58a7f968d9d1af7dc70000e2
+URL:  http://errbit.finc.co.jp/locate/58a7f968d9d1af7dc70000e2
+Started GET "/users" for ::1 at 2017-02-18 16:39:30 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 51ms (Views: 47.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-18 16:39:31 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.7ms)
+  Rendered users/new.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 47ms (Views: 43.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-18 16:39:35 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CLKz6bmhU5lkrv583Mw7lQQTriDXq/g09vPRkDpC7GOFUKVp0jPtb4ezQWw//ndw+IbCa4op2m5lf27cPZI8/A==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Success: Net::HTTPOK
+** [Airbrake] Environment Info: [Ruby: 2.3.1] [Rails: 5.0.0.1] [Env: staging]
+** [Airbrake] Response from Airbrake: 
+UUID: 58a7fa37d9d1af7dfa000100
+URL:  http://errbit.finc.co.jp/locate/58a7fa37d9d1af7dfa000100
+Started GET "/" for ::1 at 2017-02-18 16:49:06 +0900
+Processing by ApplicationController#hello as HTML
+  Rendering html template
+  Rendered html template (0.0ms)
+Completed 200 OK in 2ms (Views: 0.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for ::1 at 2017-02-18 17:08:34 +0900
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 72ms (Views: 67.9ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-18 17:08:35 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.7ms)
+  Rendered users/new.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 53ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for ::1 at 2017-02-18 17:08:39 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BWpjCkZ1EZfephmKb7VrCx9cXJR0xXFU63XARBuZiMyIiHWKLeevYT27ppqMhyfu48kw3ylHUw54+X8IHElYUw==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Success: Net::HTTPOK
+** [Airbrake] Environment Info: [Ruby: 2.3.1] [Rails: 5.0.0.1] [Env: staging]
+** [Airbrake] Response from Airbrake: 
+UUID: 58a80107d9d1af7dc70000e4
+URL:  http://errbit.finc.co.jp/locate/58a80107d9d1af7dc70000e4
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+Started GET "/users" for ::1 at 2017-02-18 17:33:25 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1m[34mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  Rendered users/index.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 375ms (Views: 345.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/new" for ::1 at 2017-02-18 17:33:27 +0900
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (36.6ms)
+  Rendered users/new.html.erb within layouts/application (41.3ms)
+Completed 200 OK in 76ms (Views: 64.6ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/users" for ::1 at 2017-02-18 17:33:30 +0900
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"NNQWZXJ14jUqcJ5dJa8SkJMLdnMbRtoUzVKicXgTtLG5NgDlGedcw8ltIU3GnV51b54aOEbE+E5e3h09f8NkLg==", "user"=>{"name"=>"Son ", "email"=>"son@gmail.com"}, "commit"=>"Create User"}
+Completed 500 Internal Server Error in 3ms (ActiveRecord: 0.0ms)
+
+
+** [Airbrake] Success: Net::HTTPOK
+** [Airbrake] Environment Info: [Ruby: 2.3.1] [Rails: 5.0.0.1] [Env: staging]
+** [Airbrake] Response from Airbrake: 
+UUID: 58a806dbd9d1af7dc70000e6
+URL:  http://errbit.finc.co.jp/locate/58a806dbd9d1af7dc70000e6
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/son-dev/config/environment.rb:5)

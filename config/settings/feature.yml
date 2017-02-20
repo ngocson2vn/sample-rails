@@ -1,0 +1,158 @@
+allow_push_notification: false
+
+omniauth:
+  facebook:
+    app_id: 193538350855275
+    app_secret: 486ef72737ddbcce023528971421be30
+  twitter:
+    app_key: hkVnha9e4asFz2zH5sEma2vHn
+    app_secret: Gc9RV7ko8kQo40KMiFI4EfpoWNdIU7PJoCXN8npg6USA1cDe1j
+basic_auth:
+  api:
+    user: "singularityLab"
+    pass: "welovesingularity"
+gcm:
+  api_key: "AIzaSyAQt-IMoplXguqC6gj8hrS3NNZeVRsAKO8"
+apns:
+  certificate_file_names:
+    - 'server_certificates_sandbox.pem'
+admin_password:
+  secret_key: 'cb98d90c2d09a5f7cb8beb7fa94e7cafd3689ce203d92a5a01'
+  cipher: 'aes-256-cbc'
+test_email: engineers_finc@googlegroups.com
+base_url: 'https://feature-app-dietcoach.finc.co.jp'
+mailer:
+  admin:
+    from: オンラインワークス事務局 <info-ow@finc.co.jp>
+    user_name: info-ow@finc.co.jp
+    password: finc0411
+  user:
+    from: FiNC <info@finc.co.jp>
+    user_name: 'info@finc.co.jp'
+    password: '20120411'
+  team:
+    from: FiNC <team@finc.co.jp>
+    user_name: 'team@finc.co.jp'
+    password: 'team20120411'
+  finc_developer:
+    from: FiNC Developer <info@finc.co.jp>
+    user_name: 'info@finc.co.jp'
+    password: '20120411'
+  send_only:
+    from: '"【FiNCサポートセンター（自動配信）】" <no-reply-fincapp@finc.com>'
+    user_name: no-reply-fincapp@finc.com
+    bcc:
+      default:
+        - no-reply-fincapp@finc.com
+      need_to_reply:
+        - no-reply-fincapp@finc.com
+        - support-fincapp@finc.com
+  support_center:
+    from: '"【FiNCサポートセンター】" <support-fincapp@finc.com>'
+    user_name: support-fincapp@finc.com
+  default:
+    bcc:
+     - engineers_finc@googlegroups.com
+
+slack:
+  finc_account_manager:
+    channel_url: <%= ENV['FAM_CHANNEL_URL'] %>
+    test_channel_url: <%= ENV['FAM_TEST_CHANNEL_URL'] %>
+    channel: '#fam_test'
+  requl_mobile:
+    url: ''
+    channel: '#diet_coach_develop'
+  fi_chat:
+    url: ''
+    channel: ''
+  rake:
+    finc_app_tag:
+      url: 'https://finc.slack.com'
+      channel: '#dc_warning_staging'
+
+finc_store:
+  base_url: 'https://staging-store.finc.co.jp'
+finc_app:
+  consumer_key: 'M4HXT1y4-xuyoKE1DgHu4wtWyYX4P5BaTxsWf7Kp'
+  consumer_key_for_wellness_survey: 'lBVinAslijzcf1CtxDYYQewIMEUJsDxxuk3fBVpN'
+  consumer_key_for_customer_manager: '4gdrCMK1NTFE-mzyyxVNdCi3GLrD4WBWkb5oH5bdSo4yEy5NxmXEMPPmZvHL'
+  consumer_key_for_wellness_ai: 'gh9nErE8/zOhcgVf0bGXJfnF3ckLea6O4CSZ2wEQ'
+genetic_test:
+  database:
+    database: "genetic_test_staging"
+  api_version: v1
+  base_url: 'https://staging-exam.finc.co.jp'
+  api:
+    access_grant: '219bdc9725e75b85b94a1a40716732f5586212c7b5987d27a5db1d39876acfbe'
+customer_manager:
+  api:
+    version: v1
+    access_grant: '438378e54c112716d28679a629c9d8cb63acfc78ceb208c1b4f3303c4bef54a1'
+    base_url: 'https://staging-c.finc.co.jp'
+wellness_survey:
+  base_url: 'https://stating-wellness-survey.finc.com'
+  api:
+    version: v1
+    access_grant: 'Bu8qQPQ9YjcPWruoag_t_GRXxn9CyRmgPNG4DCJT'
+    base_url: 'https://staging-wellness-survey.finc.com'
+  light_survey_url: 'https://staging-wellness-survey.finc.com/oauth/authorization'
+  personal_survey_url: 'https://staging-wellness-survey.finc.com/oauth/authorization/personal_survey'
+  finish_url: 'fincapp://wellness-survey-callback'
+  mental_care_url: 'https://staging-wellness-survey.finc.com/oauth/authorization/mental_care'
+wellness_ai:
+  api:
+    version: v1
+    application_token: 'xnzsAFinrgy1iqqqneyKpyhyV_Vt3nsy4D9siXsn'
+    access_grant: 'o2PtCedv5V1ATXAUTRsAf-9GhZ41Lx4E6AchCnzn_7tKc66k8uL1dfxH-pqcusZr'
+    base_url: 'http://staging-wellness-ai.finc.local'
+finc_account_manager:
+  enable: true
+  api:
+    version: v1
+    access_grant: <%= ENV['FAM_ACCESS_GRANT'] %>
+    base_url: 'http://staging-fam.finc.local'
+fi_chat:
+  api:
+    access_grant: QbzHKfuepna1NSRDiT1FN1FF_rQzcCEMR_9RDLF1Q51yKWwHd7qGU39NRPsDfwAf
+
+aws:
+  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  fog_directory: "requl-feature"
+secrets:
+  secret_key_base: 678e9ca2c8f76fe901f6da484234ebd04224857fc0d90d0511b0fe90abb32f42d89501320249bb181af56183720214f4dae5c86202349633a982416424ce7b5f
+db:
+  default:
+    username: fa_w
+    password: <%= ENV['FINC_APP_DATABASE_WRITE_PASSWORD'] %>
+    database: requl_mobile_feature
+    host: requl-mobile-feature.cdovlarfnsxf.ap-northeast-1.rds.amazonaws.com
+    port: 3306
+  genetic_test:
+    username: gt_r
+    password: <%= ENV['GENETIC_TEST_DATABASE_READ_PASSWORD'] %>
+    database: genetic_test_staging
+    host: genetic-test-staging.cdovlarfnsxf.ap-northeast-1.rds.amazonaws.com
+    port: 3306
+
+errbit:
+  api_key: 4c9a8ba8c4ee17ac0d20a7f746e865e8
+
+finc_services:
+  access_grants:
+    - Bu8qQPQ9YjcPWruoag_t_GRXxn9CyRmgPNG4DCJT
+    - 438378e54c112716d28679a629c9d8cb63acfc78ceb208c1b4f3303c4bef54a1
+    - 219bdc9725e75b85b94a1a40716732f5586212c7b5987d27a5db1d39876acfbe
+    - o2PtCedv5V1ATXAUTRsAf-9GhZ41Lx4E6AchCnzn_7tKc66k8uL1dfxH-pqcusZr
+    - QbzHKfuepna1NSRDiT1FN1FF_rQzcCEMR_9RDLF1Q51yKWwHd7qGU39NRPsDfwAf
+
+laerdal:
+  application_token: <%= ENV['LAERDAL_ACCESS_TOKEN'] %>
+
+sbi_life:
+  tmp_user:
+    sign_up_with_email:
+      auth_token: <%= ENV['SBI_LIFE_TMP_USER_SIGN_UP_WITH_EMAIL_AUTH_TOKEN'] %>
+    new:
+      blank_mail:
+        mailto_address: <%= ENV['SBI_LIFE_TMP_USER_NEW_BLANK_MAIL_TO_ADDRESS'] %>

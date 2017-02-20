@@ -1,0 +1,222 @@
+allow_push_notification: false
+
+omniauth:
+  facebook:
+    app_id: ''
+    app_secret: ''
+  twitter:
+    app_key: ''
+    app_secret: ''
+basic_auth:
+  api:
+    user: "singularityLab"
+    pass: "welovesingularity"
+gcm:
+  api_key: ''
+apns:
+  certificate_file_names:
+    - 'server_certificates_sandbox.pem'
+admin_password:
+  secret_key: ''
+  cipher: 'aes-256-cbc'
+test_email: engineers_finc@googlegroups.com
+base_url: 'https://qa-app-dietcoach.finc.com'
+mailer:
+  admin:
+    from: オンラインワークス事務局 <info-ow@finc.co.jp>
+    user_name: info-ow@finc.co.jp
+  user:
+    from: FiNC <info@finc.com>
+    user_name: 'info@finc.com'
+  finc_developer:
+    from: FiNC Developer <info@finc.com>
+    user_name: 'info@finc.com'
+    bcc: []
+  send_only:
+    from: '"【FiNCサポートセンター（自動配信）】" <no-reply-fincapp@finc.com>'
+    user_name: no-reply-fincapp@finc.com
+    bcc:
+      default:
+        - no-reply-fincapp@finc.com
+      need_to_reply:
+        - no-reply-fincapp@finc.com
+        - support-fincapp@finc.com
+  support_center:
+    from: '"【FiNCサポートセンター】" <support-fincapp@finc.com>'
+    user_name: support-fincapp@finc.com
+  default:
+    bcc:
+     - engineers_finc@googlegroups.com
+     - pd@finc.com
+
+partner_organization:
+  blank_mail:
+    address: 'apply-qa@inbound.finc.com'
+    access_token: <%= ENV['PO_BLANKMAIL_ACCESS_TOKEN'] %>
+
+finc_store:
+  base_url: 'https://qa-mall.finc.com'
+  sb:
+    base_url: 'https://qa-healthcare-mall.finc.com'
+finc_app:
+  consumer_key: ''
+  consumer_key_for_wellness_survey: ''
+  consumer_key_for_customer_manager: ''
+  consumer_key_for_wellness_ai: ''
+finc_app_web_client:
+  base_url: 'https://qa-app-client.finc.com'
+genetic_test:
+  database:
+    database: "genetic_test_qa"
+  api_version: v1
+  base_url: 'https://qa-exam.finc.co.jp'
+  api:
+    access_grant: ''
+  paper_media_tmp_user_password: ''
+customer_manager:
+  api:
+    version: v1
+    access_grant: ''
+    base_url: 'https://qa-c.finc.co.jp'
+wellness_survey:
+  base_url: 'https://qa-wellness-survey.finc.com'
+  api:
+    version: v1
+    access_grant: ''
+    base_url: 'https://qa-wellness-survey.finc.com'
+  light_survey_url: 'https://qa-wellness-survey.finc.com/oauth/authorization'
+  personal_survey_url: 'https://qa-wellness-survey.finc.com/oauth/authorization/personal_survey'
+  finish_url: 'fincapp://wellness-survey-callback'
+  mental_care_url: 'https://qa-wellness-survey.finc.com/oauth/authorization/mental_care'
+wellness_ai:
+  api:
+    version: v1
+    application_token: ''
+    access_grant: ''
+    base_url: 'http://qa-wellness-ai.finc.local'
+finc_account_manager:
+  enable: true
+  api:
+    version: v1
+    access_grant: <%= ENV['FAM_ACCESS_GRANT'] %>
+    base_url: 'http://qa-fam.finc.local'
+  slack:
+    channel_url: <%= ENV['FAM_CHANNEL_URL'] %>
+    test_channel_url: <%= ENV['FAM_TEST_CHANNEL_URL'] %>
+fi_chat:
+  api:
+    base_url: 'https://qa-fi-chat-server.finc.com'
+    access_grant: <%= ENV['FI_CHAT_ACCESS_TOKEN'] %>
+    application_token: <%= ENV['FI_CHAT_ACCESS_TOKEN'] %>
+fi_chat_client:
+  api:
+    base_url: 'https://qa-fi-chat-client.finc.com'
+company_account_manager:
+  api:
+    base_url: 'https://qa-company-account-manager.finc.com'
+    access_grant: <%= ENV['CAM_ACCESS_GRANT'] %>
+    application_token: <%= ENV['CAM_ACCESS_TOKEN'] %>
+o2o_client:
+  base_url: 'https://qa-o2o-client.finc.com'
+o2o:
+  base_url: 'https://qa-o2o-server.finc.com'
+
+aws:
+  access_key_id: ''
+  secret_access_key: ''
+  fog_directory: "requl-staging"
+  cloudfront:
+    base_url: ''
+    private_key_file_name: <%= ENV['CF_PRIVATE_KEY_FILE'] %>
+    key_pair_id: <%= ENV['CF_KEY_PAIR_ID'] %>
+  elastic_transcoder:
+    promotion_movie:
+      pipeline_id:
+      sqs_endpoint:
+      preset_id:
+        mobile_movie:
+          web_movie:
+  cognito:
+    identity_pool_id: <%= ENV['AWS_COGNITO_IDENTITY_POOL_ID'] %>
+    identity_provider_name: <%= ENV['AWS_COGNITO_IDENTITY_PROVIDER_NAME'] %>
+secrets:
+  secret_key_base: ''
+db:
+  default:
+    username: <%= ENV['FINC_APP_DATABASE_WRITE_USER'] %>
+    password: <%= ENV['FINC_APP_DATABASE_WRITE_PASSWORD'] %>
+    database: requl_mobile_qa
+    host: <%= ENV['FINC_APP_DATABASE_HOST'] %>
+    port: 3306
+  genetic_test:
+    username: <%= ENV['GENETIC_TEST_DATABASE_READ_USER'] %>
+    password: <%= ENV['GENETIC_TEST_DATABASE_READ_PASSWORD'] %>
+    database: genetic_test_qa
+    host: <%= ENV['GENETIC_TEST_DATABASE_HOST'] %>
+    port: 3306
+
+errbit:
+  api_key: 4c9a8ba8c4ee17ac0d20a7f746e865e8
+
+finc_services:
+  access_grants:
+    - ''
+
+from_scratch:
+  sftp:
+    server_host: example
+    username: user
+    identity_key: /home/ubuntu/.ssh/key
+
+sb:
+  cindy:
+    client_id: ''
+    client_secret: ''
+    authentication:
+      fetch_code:
+        url: ''
+        redirect_uri_for_sign_up: ''
+        redirect_uri_for_sign_in: ''
+        redirect_uri_for_cancel: ''
+      fetch_access_token:
+        url: ''
+        redirect_uri: ''
+      check_contracted:
+        url: ''
+    service:
+      contents_service_id: ''
+      usage_status:
+        url: ''
+      start_billing:
+        url: ''
+      stop_billing:
+        url: ''
+  healthcare:
+    application_id: ''
+    summary:
+      url: ''
+    detail:
+      url: ''
+    started:
+      url: ''
+      redirect_uri: ''
+    canceled:
+      url: ''
+      redirect_uri: ''
+  sftp:
+    host: ''
+    username: ubuntu
+    options:
+      keys: '/path/to/your/identity_key'
+      port: 22
+
+laerdal:
+  application_token: <%= ENV['LAERDAL_ACCESS_TOKEN'] %>
+
+sbi_life:
+  tmp_user:
+    sign_up_with_email:
+      auth_token: <%= ENV['SBI_LIFE_TMP_USER_SIGN_UP_WITH_EMAIL_AUTH_TOKEN'] %>
+    new:
+      blank_mail:
+        mailto_address: ''

@@ -1,0 +1,366 @@
+allow_push_notification: false
+
+omniauth:
+  facebook:
+    app_id: <%= ENV['FACEBOOK_APP_ID'] %>
+    app_secret: <%= ENV['FACEBOOK_APP_SECRET'] %>
+  twitter:
+    app_key: hkVnha9e4asFz2zH5sEma2vHn
+    app_secret: Gc9RV7ko8kQo40KMiFI4EfpoWNdIU7PJoCXN8npg6USA1cDe1j
+  fitbit:
+    client_id: 'this will be overwrite by local.yml'
+    client_secret: 'this will be overwrite by local.yml'
+    redirect_uri: 'https://staging-app-dietcoach.finc.co.jp/fitbit/auth/authorized_callback'
+    scope: [activity sleep weight]
+basic_auth:
+  api:
+    user: "singularityLab"
+    pass: "welovesingularity"
+gcm:
+  api_key: "AIzaSyCQgGSJOBtFG6B4EcWZa2azAlAQ0IMxOdo"
+apns:
+  certificate_file_names:
+    - 'finc_enterprise.pem'
+    - 'karadasupport_enterprise.pem'
+admin_password:
+  secret_key: 'cb98d90c2d09a5f7cb8beb7fa94e7cafd3689ce203d92a5a01'
+  cipher: 'aes-256-cbc'
+test_email: engineers_finc@googlegroups.com
+base_url: 'https://staging-app-dietcoach.finc.co.jp'
+mailer:
+  admin:
+    from: オンラインワークス事務局 <info-ow@finc.co.jp>
+    user_name: info-ow@finc.co.jp
+  user:
+    from: FiNC <info@finc.com>
+    user_name: 'info@finc.com'
+  finc_developer:
+    from: FiNC Developer <info@finc.com>
+    user_name: 'info@finc.com'
+    bcc: []
+  send_only:
+    from: '【FiNCサポートセンター（自動配信）】 <no-reply-fincapp@finc.com>'
+    user_name: no-reply-fincapp@finc.com
+    bcc:
+      default:
+        - no-reply-fincapp@finc.com
+      need_to_reply:
+        - no-reply-fincapp@finc.com
+        - support-fincapp@finc.com
+  support_center:
+    from: '【FiNCサポートセンター】 <support-fincapp@finc.com>'
+    user_name: support-fincapp@finc.com
+  default:
+    bcc:
+     - engineers_finc@googlegroups.com
+     - pd@finc.com
+  admin_basic_authentication:
+    addresses: [kenta.yoshitani.i@finc.com]
+
+slack:
+  finc_account_manager:
+    channel_url: <%= ENV['FAM_CHANNEL_URL'] %>
+    test_channel_url: <%= ENV['FAM_TEST_CHANNEL_URL'] %>
+    channel: '#fam_test'
+  requl_mobile:
+    url: ''
+    channel: '#diet_coach_develop'
+  fi_chat:
+    url: 'https://hooks.slack.com/services/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'
+    channel: '#fi_chat_bot_test'
+  activity_timeline:
+    url: 'https://hooks.slack.com/services/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'
+    channel: '#fi_chat_bot_test'
+  rake:
+    finc_app_tag:
+      url: ''
+      channel: '#dc_warning_staging'
+
+partner_organization:
+  blank_mail:
+    address: 'apply-stg@inbound.finc.com'
+    access_token: <%= ENV['PO_BLANKMAIL_ACCESS_TOKEN'] %>
+
+finc_store:
+  base_url: 'https://staging-mall.finc.com'
+  sb:
+    base_url: 'https://staging-healthcare-mall.finc.com'
+  api:
+    access_grant: ''
+finc_app:
+  consumer_key: 'M4HXT1y4-xuyoKE1DgHu4wtWyYX4P5BaTxsWf7Kp'
+  consumer_key_for_wellness_survey: 'lBVinAslijzcf1CtxDYYQewIMEUJsDxxuk3fBVpN'
+  consumer_key_for_customer_manager: '4gdrCMK1NTFE-mzyyxVNdCi3GLrD4WBWkb5oH5bdSo4yEy5NxmXEMPPmZvHL'
+  consumer_key_for_wellness_ai: 'gh9nErE8/zOhcgVf0bGXJfnF3ckLea6O4CSZ2wEQ'
+  consumer_key_for_online_works: '0zISow3TpLi8Z82BxY22zNO0QOl1jMjsOY63HCNy'
+finc_app_web_client:
+  base_url: 'https://staging-app-client.finc.com'
+genetic_test:
+  database:
+    database: "genetic_test_staging"
+  api_version: v1
+  base_url: 'https://staging-exam.finc.co.jp'
+  api:
+    access_grant: '219bdc9725e75b85b94a1a40716732f5586212c7b5987d27a5db1d39876acfbe'
+  paper_media_tmp_user_password: '1234joyfit'
+customer_manager:
+  api:
+    version: v1
+    access_grant: '438378e54c112716d28679a629c9d8cb63acfc78ceb208c1b4f3303c4bef54a1'
+    base_url: 'https://staging-c.finc.co.jp'
+wellness_survey:
+  base_url: 'https://staging-wellness-survey.finc.com'
+  api:
+    version: v1
+    access_grant: 'Bu8qQPQ9YjcPWruoag_t_GRXxn9CyRmgPNG4DCJT'
+    base_url: 'https://staging-wellness-survey.finc.com'
+  light_survey_url: 'https://staging-wellness-survey.finc.com/oauth/authorization'
+  personal_survey_url: 'https://staging-wellness-survey.finc.com/oauth/authorization/personal_survey'
+  finish_url: 'fincapp://wellness-survey-callback'
+  mental_care_url: 'https://staging-wellness-survey.finc.com/oauth/authorization/mental_care'
+wellness_ai:
+  api:
+    version: v1
+    application_token: 'xnzsAFinrgy1iqqqneyKpyhyV_Vt3nsy4D9siXsn'
+    access_grant: 'o2PtCedv5V1ATXAUTRsAf-9GhZ41Lx4E6AchCnzn_7tKc66k8uL1dfxH-pqcusZr'
+    base_url: 'http://staging-wellness-ai.finc.local'
+finc_account_manager:
+  enable: true
+  api:
+    version: v1
+    access_grant: <%= ENV['FAM_ACCESS_GRANT'] %>
+    base_url: 'http://staging-fam.finc.local'
+fi_chat:
+  api:
+    base_url: 'https://staging-fi-chat-server.finc.com'
+    access_grant: <%= ENV['FI_CHAT_ACCESS_TOKEN'] %>
+    application_token: <%= ENV['FI_CHAT_ACCESS_TOKEN'] %>
+  direct_chat:
+    official_account:
+      finc_information_id: 242
+      broadcast_sendable_ids:
+        - 9
+        - 12
+        - 27
+
+fi_chat_client:
+  api:
+    base_url: 'https://staging-fi-chat-client.finc.com'
+company_account_manager:
+  api:
+    base_url: 'https://staging-company-account-manager.finc.com'
+    access_grant: <%= ENV['CAM_ACCESS_GRANT'] %>
+    application_token: <%= ENV['CAM_ACCESS_TOKEN'] %>
+o2o_client:
+  base_url: 'https://staging-o2o-client.finc.com'
+o2o:
+  base_url: 'https://staging-o2o-server.finc.com'
+
+online_works:
+  api:
+    access_grant: <%= ENV['ONLINE_WORKS_ACCESS_GRANT'] %>
+    base_url: 'https://staging-ow.finc.com'
+
+push_notifier:
+  api:
+    access_grant: <%= ENV['PUSH_NOTIFIER_ACCESS_GRANT'] %>
+    base_url: 'http://staging-push-notifier.finc.local'
+
+rankie:
+  api:
+    access_grant: <%= ENV['RANKIE_ACCESS_GRANT'] %>
+    base_url: 'https://staging-rankie.finc.com'
+  event:
+    tft:
+      ranking_id: 280
+      tab_ids:
+        - 66561
+        - 66562
+        - 66563
+
+activity_timeline:
+  api:
+    base_url: 'https://staging-activity-timeline.finc.com/'
+    application_token: <%= ENV['ACTIVITY_TIMELINE_ACCESS_TOKEN'] %>
+
+try_content:
+  tmp:
+    sakura_comment:
+      enabled_user_ids:
+        - 124
+        - 488
+        - 624
+        - 1132
+        - 1198
+        - 1352
+        - 1454
+
+aws:
+  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  fog_directory: "requl-staging"
+  cloudfront:
+    base_url: 'https://requl-staging.cdn.finc.com'
+    private_key_file_name: 'pk-APKAJBSVX2D4CHODPAKQ.pem'
+    key_pair_id: 'APKAJBSVX2D4CHODPAKQ'
+  elastic_transcoder:
+    common:
+      pipeline_id: '1471561557157-ox6n4q'
+      sqs_endpoint: 'https://sqs.ap-northeast-1.amazonaws.com/759549166074/elastic_transcoder_staging'
+    try_common:
+      preset_id:
+        movie: '1480415525986-qrdqmi'
+        mobile_movie: '1480415525986-qrdqmi'
+        webm_movie: '1351620000001-100240'
+    promotion_movie:
+      pipeline_id: '1471561557157-ox6n4q'
+      sqs_endpoint: 'https://sqs.ap-northeast-1.amazonaws.com/759549166074/elastic_transcoder_staging'
+      preset_id:
+        mobile_movie: '1473999882571-7tqhn8'
+        web_movie: '1351620000001-100240'
+      uploadable_official_account_ids:
+        - 22
+  sns:
+    concierge:
+      topic_name: 'ConciergeStaging'
+  cognito:
+    identity_pool_id: <%= ENV['AWS_COGNITO_IDENTITY_POOL_ID'] %>
+    identity_provider_name: <%= ENV['AWS_COGNITO_IDENTITY_PROVIDER_NAME'] %>
+
+secrets:
+  secret_key_base: 678e9ca2c8f76fe901f6da484234ebd04224857fc0d90d0511b0fe90abb32f42d89501320249bb181af56183720214f4dae5c86202349633a982416424ce7b5f
+db:
+  default:
+    username: fa_w
+    password: <%= ENV['FINC_APP_DATABASE_WRITE_PASSWORD'] %>
+    database: requl_mobile_staging
+    host: common-staging-aurora.cluster-cdovlarfnsxf.ap-northeast-1.rds.amazonaws.com
+    port: 3306
+  genetic_test:
+    username: gt_r
+    password: <%= ENV['GENETIC_TEST_DATABASE_READ_PASSWORD'] %>
+    database: genetic_test_staging
+    host: genetic-test-staging.cdovlarfnsxf.ap-northeast-1.rds.amazonaws.com
+    port: 3306
+
+redis:
+  host: commonredis-stg.7cs73f.ng.0001.apne1.cache.amazonaws.com
+  port: 6379
+  namespace: <%= [Rails.application.class.parent_name, Rails.env].join(':') %>
+
+sidekiq:
+  redis:
+    host: sidekiqredis-stg.7cs73f.ng.0001.apne1.cache.amazonaws.com
+    port: 6379
+
+errbit:
+  api_key: 4c9a8ba8c4ee17ac0d20a7f746e865e8
+
+sentry:
+  dsn: 5184f25dd7b74d9c9f75a19c017f151b:0059cf4d52aa46e5a7d9b45cb69bf7e7
+
+fluentd:
+  host: staging-fluentd-sentry.finc.local
+  port: 24224
+
+finc_services:
+  access_grants:
+    - Bu8qQPQ9YjcPWruoag_t_GRXxn9CyRmgPNG4DCJT
+    - 438378e54c112716d28679a629c9d8cb63acfc78ceb208c1b4f3303c4bef54a1
+    - 219bdc9725e75b85b94a1a40716732f5586212c7b5987d27a5db1d39876acfbe
+    - o2PtCedv5V1ATXAUTRsAf-9GhZ41Lx4E6AchCnzn_7tKc66k8uL1dfxH-pqcusZr
+    - QbzHKfuepna1NSRDiT1FN1FF_rQzcCEMR_9RDLF1Q51yKWwHd7qGU39NRPsDfwAf
+    - QAV7GDVhp_Mtxfazsjw14ZVnntKNyiVKZswhSWoh
+    - JAYo5e5y00rezFW4dv76yJnDLjrEU12JD99MIWCVNLNgdXQity8BuF0ELOsdHUVu
+    - <%= ENV['FAM_ACCESS_GRANT'] %>
+    - <%= ENV['CAM_ACCESS_GRANT'] %>
+
+from_scratch:
+  sftp:
+    server_host: ftp.fs-bdash.com
+    username: bd_bmhqca_1
+    identity_key: /home/ubuntu/.ssh/f_scratch_rsa
+
+sb:
+  cindy:
+    client_id: CHXvBFRKG3YKYmBFIqYRa1j7IeP2upPY
+    client_secret: TENLGKw7epxHnntXLt1DJ7JVPqlwIeEZ
+    authentication:
+      fetch_code:
+        url: 'http://id.dev.whitecloud.jp/sbid_auth/type1/2.0/authorization.php'
+        redirect_uri_for_sign_up: 'https://staging-pksapp.finc.com/users/oauth/cindy/callback'
+        redirect_uri_for_sign_in: 'https://staging-pksapp.finc.com/users/oauth/cindy_sign_in/callback'
+        redirect_uri_for_cancel: 'https://staging-pksapp.finc.com/users/oauth/cindy/callback/cancel'
+      fetch_access_token:
+        url: 'http://ifapi.id.dev.whitecloud.jp/sbid/2.0/sbid_token_endpoint/token'
+        redirect_uri: 'https://staging-pksapp.finc.com/users/oauth/cindy/callback'
+      check_contracted:
+        url: 'http://ifapi.id.dev.whitecloud.jp/sbid/2.0/sbid_token_endpoint/checktoken'
+    service:
+      contents_service_id: '139'
+      usage_status:
+        url: 'http://ifapi.id.dev.whitecloud.jp/sgw/cdp/GetServiceUsageStatus'
+      start_billing:
+        url: 'http://ifapi.id.dev.whitecloud.jp/sgw/cdp/StartBilling'
+      stop_billing:
+        url: 'http://ifapi.id.dev.whitecloud.jp/sgw/cdp/StopBilling'
+  healthcare:
+    application_id: 'ux3C38lJeNXZhF9H8NOFmet0uszSqzdnQWCMqxHIItPawlms4bQc22rQCzwQZGjTisWgKQN97T7'
+    summary:
+      url: 'https://stg.healthcare.mb.softbank.jp/stg/ext/v1/api/get_bodycomp_summary.php'
+    detail:
+      url: 'https://stg.healthcare.mb.softbank.jp/stg/ext/v1/api/get_ac_bodycomp_detail.php'
+    started:
+      url: 'https://stg.healthcare.mb.softbank.jp/stg/ext/v1/webview/login.php'
+      redirect_uri: 'https://staging-pksapp.finc.com/sb/services/bodycomposition/started'
+    canceled:
+      url: 'https://stg.healthcare.mb.softbank.jp/stg/ext/v1/webview/logout.php'
+      redirect_uri: 'https://staging-pksapp.finc.com/sb/services/bodycomposition/canceled'
+  sftp:
+    host: ''
+    username: ubuntu
+    options:
+      identity_keys: '/path/to/your/identity_key'
+      port: 22
+
+girls_award:
+  host: 'staging-girls-award.finc.com'
+  protocol: 'https'
+
+laerdal:
+  application_token: <%= ENV['LAERDAL_ACCESS_TOKEN'] %>
+
+sbi_life:
+  tmp_user:
+    sign_up_with_email:
+      auth_token: <%= ENV['SBI_LIFE_TMP_USER_SIGN_UP_WITH_EMAIL_AUTH_TOKEN'] %>
+    new:
+      blank_mail:
+        mailto_address: 'sbi-apply-stg@inbound.finc.com'
+
+sfdc:
+  help_url:
+    consumer_key: <%= ENV['SFDC_HELP_URL_CONSUMER_KEY'] %>
+    salt: <%= ENV['SFDC_HELP_URL_SALT'] %>
+    url: 'https://dev3-finc.cs6.force.com/faq'
+
+pre_registration:
+  android_token:
+    authentication_token: <%= ENV['PRE_REGISTRATION_ANDROID_TOKEN_AUTHENTICATION_TOKEN'] %>
+  ios_token:
+    authentication_token: <%= ENV['PRE_REGISTRATION_IOS_TOKEN_AUTHENTICATION_TOKEN'] %>
+
+pre_registration_user:
+  authentication_token: <%= ENV['PRE_REGISTRATION_USER_AUTHENTICATION_TOKEN'] %>
+
+app_store:
+  user_invitations:
+    default:
+      ios_url: 'https://itunes.apple.com/jp/app/finc/id965626396?mt=8'
+      android_url: 'https://play.google.com/store/apps/details?id=jp.co.fincapp&hl=ja'
+    ambassador:
+      ios_url: 'https://itunes.apple.com/jp/app/finc/id965626396?mt=8'
+      android_url: 'https://play.google.com/store/apps/details?id=jp.co.fincapp&hl=ja'
+    fincrew:
+      ios_url: 'https://itunes.apple.com/jp/app/finc/id965626396?mt=8'
+      android_url: 'https://play.google.com/store/apps/details?id=jp.co.fincapp&hl=ja'

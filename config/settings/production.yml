@@ -1,0 +1,374 @@
+allow_push_notification: true
+
+omniauth:
+  facebook:
+    app_id: <%= ENV['FACEBOOK_APP_ID'] %>
+    app_secret: <%= ENV['FACEBOOK_APP_SECRET'] %>
+  twitter:
+    app_key: hkVnha9e4asFz2zH5sEma2vHn
+    app_secret: Gc9RV7ko8kQo40KMiFI4EfpoWNdIU7PJoCXN8npg6USA1cDe1j
+  fitbit:
+    client_id: 'this will be overwrite by local.yml'
+    client_secret: 'this will be overwrite by local.yml'
+    redirect_uri: 'https://app-dietcoach.finc.co.jp/fitbit/auth/authorized_callback'
+    scope: [activity sleep weight]
+basic_auth:
+  api:
+    user: "singularityLab"
+    pass: "welovesingularity"
+gcm:
+  api_key: "AIzaSyArychF3o0dE1lLvAvozT6JF6hb3nvFUYM"
+apns:
+  certificate_file_names:
+    - 'aps_production.pem'
+    - 'karadasupport_apns_production.pem'
+
+admin_password:
+  secret_key: 'cb98d90c2d09a5f7cb8beb7fa94e7cafd3689ce203d92a5a01'
+  cipher: 'aes-256-cbc'
+test_email: engineers_finc@googlegroups.com
+base_url: 'https://app-dietcoach.finc.co.jp'
+mailer:
+  host: 'localhost:3000'
+  user_name: 'YOURMAILEREMAIL@finc.co.jp'
+  password: 'YOUR MAILER PASSWORD'
+  admin:
+    from: オンラインワークス事務局 <info-ow@finc.co.jp>
+    user_name: info-ow@finc.co.jp
+  user:
+    from: FiNC <info@finc.com>
+    user_name: 'info@finc.com'
+  finc_developer:
+    from: FiNC Developer <info@finc.com>
+    bcc: []
+  send_only:
+    from: '【FiNCサポートセンター（自動配信）】 <no-reply-fincapp@finc.com>'
+    user_name: no-reply-fincapp@finc.com
+    bcc:
+      default:
+        - no-reply-fincapp@finc.com
+      need_to_reply:
+        - no-reply-fincapp@finc.com
+        - support-fincapp@finc.com
+  support_center:
+    from: '【FiNCサポートセンター】 <support-fincapp@finc.com>'
+    user_name: support-fincapp@finc.com
+  default:
+    bcc:
+     - engineers_finc@googlegroups.com
+  admin_basic_authentication:
+    addresses: [yoshie.kono@finc.com, kazushige.taguchi@finc.com]
+
+slack:
+  finc_account_manager:
+    channel_url: <%= ENV['FAM_CHANNEL_URL'] %>
+    test_channel_url: <%= ENV['FAM_TEST_CHANNEL_URL'] %>
+    channel: '#finc_account_manager'
+  requl_mobile:
+    url: ''
+    channel: '#diet_coach'
+  fi_chat:
+    url: 'https://hooks.slack.com/services/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'
+    channel: '#fi_chat_bot'
+  activity_timeline:
+    url: 'https://hooks.slack.com/services/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'
+    channel: '#fi_chat_bot_test'
+  rake:
+    finc_app_tag:
+      url: 'https://finc.slack.com'
+      channel: '#dietcoach_warning'
+
+partner_organization:
+  blank_mail:
+    address: 'apply@inbound.finc.com'
+    access_token: <%= ENV['PO_BLANKMAIL_ACCESS_TOKEN'] %>
+
+finc_store:
+  base_url: 'https://mall.finc.com'
+  sb:
+    base_url: 'https://healthcare-mall.finc.com'
+  api:
+    access_grant: ''
+finc_app:
+  consumer_key: 'XM83nPQ114R2h21W6uq_xzCL_E-VtZzp-VgNxp7z'
+  consumer_key_for_wellness_survey: 'lBVinAslijzcf1CtxDYYQewIMEUJsDxxuk3fBVpN'
+  consumer_key_for_customer_manager: '77LGh5PxxuxycgUskXZCQkLCRj9b2SpDvhWxdghp8x2VfUBCfSrTkBBB4-5N'
+  consumer_key_for_wellness_ai: 'gh9nErE8/zOhcgVf0bGXJfnF3ckLea6O4CSZ2wEQ'
+  consumer_key_for_online_works: 'bC7Mi5fgGw8EduRaMlLjgpzYPg8MsaoLGbdFMmz0'
+finc_app_web_client:
+  base_url: 'https://app-client.finc.com'
+genetic_test:
+  database:
+    database: "genetic_test_production"
+  api_version: v1
+  base_url: 'https://exam.finc.co.jp'
+  api:
+    access_grant: '0c0931c49c7f2895a5ba278c7ebcbce035457693ab7b78188f1e5042cf729ac8'
+  paper_media_tmp_user_password: '1234joyfit'
+customer_manager:
+  api:
+    version: v1
+    access_grant: 'df47f6caedfa7051d9fe02994452cb50bb543bbb2c8614e576920e473bb41f47'
+    base_url: 'https://c.finc.co.jp'
+wellness_survey:
+  base_url: 'https://wellness-survey.finc.com/'
+  api:
+    version: v1
+    access_grant: 'sQz27kJD1TUYAk_HTbuVbsotBGNo42xs9CaGe4HK'
+    base_url: 'https://wellness-survey.finc.com'
+  light_survey_url: 'https://wellness-survey.finc.com/oauth/authorization'
+  personal_survey_url: 'https://wellness-survey.finc.com/oauth/authorization/personal_survey'
+  finish_url: 'fincapp://wellness-survey-callback'
+  mental_care_url: 'https://wellness-survey.finc.com/oauth/authorization/mental_care'
+wellness_ai:
+  api:
+    version: v1
+    access_grant: 'iofziXkB2MjsBKR8koFF7T9DSZiCJ6Z1mCVDWDToGjDfzHxULd_9kHysFx2D'
+    application_token: 'xmVep-kBJaGozv6W1x7iYUwjZogEzFMC8V5sTsvf'
+    base_url: 'http://wellness-ai.finc.local'
+finc_account_manager:
+  enable: true
+  api:
+    version: v1
+    access_grant: <%= ENV['FAM_ACCESS_GRANT'] %>
+    base_url: 'http://fam.finc.local'
+fi_chat:
+  api:
+    base_url: 'https://fi-chat-server.finc.com'
+    access_grant: <%= ENV['FI_CHAT_ACCESS_TOKEN'] %>
+    application_token: <%= ENV['FI_CHAT_ACCESS_TOKEN'] %>
+  direct_chat:
+    official_account:
+      finc_information_id: 128
+      broadcast_sendable_ids:
+        - 9
+        - 12
+        - 86
+        - 89
+
+fi_chat_client:
+  api:
+    base_url: 'https://fi-chat-client.finc.com'
+company_account_manager:
+  api:
+    base_url: 'https://company-account-manager.finc.com'
+    access_grant: <%= ENV['CAM_ACCESS_GRANT'] %>
+    application_token: <%= ENV['CAM_ACCESS_TOKEN'] %>
+o2o_client:
+  base_url: 'https://o2o-client.finc.com'
+o2o:
+  base_url: 'https://o2o-server.finc.com'
+
+online_works:
+  api:
+    access_grant: <%= ENV['ONLINE_WORKS_ACCESS_GRANT'] %>
+    base_url: 'https://ow.finc.com'
+
+push_notifier:
+  api:
+    access_grant: <%= ENV['PUSH_NOTIFIER_ACCESS_GRANT'] %>
+    base_url: 'http://push-notifier.finc.local'
+
+rankie:
+  api:
+    access_grant: <%= ENV['RANKIE_ACCESS_GRANT'] %>
+    base_url: 'https://rankie.finc.com'
+  event:
+    tft:
+      ranking_id: 31
+      tab_ids:
+        - 66561
+        - 66562
+        - 66563
+
+activity_timeline:
+  api:
+    base_url: 'https://activity-timeline.finc.com/'
+    application_token: <%= ENV['ACTIVITY_TIMELINE_ACCESS_TOKEN'] %>
+
+try_content:
+  tmp:
+    sakura_comment:
+      enabled_user_ids:
+        - 124
+        - 488
+        - 624
+        - 1132
+        - 1198
+        - 1352
+        - 1454
+        - 39595
+
+aws:
+  access_key_id: <%= ENV['AWS_ACCESS_KEY_ID'] %>
+  secret_access_key: <%= ENV['AWS_SECRET_ACCESS_KEY'] %>
+  fog_directory: "requl-production"
+  cloudfront:
+    base_url: 'https://requl-production.cdn.finc.com'
+    private_key_file_name: 'pk-APKAJBSVX2D4CHODPAKQ.pem'
+    key_pair_id: 'APKAJBSVX2D4CHODPAKQ'
+  elastic_transcoder:
+    common:
+      pipeline_id: '1474446076557-c1mpbd'
+      sqs_endpoint: 'https://sqs.ap-northeast-1.amazonaws.com/759549166074/elastic_transcoder_production'
+    try_common:
+      preset_id:
+        movie: '1480415525986-qrdqmi'
+        mobile_movie: '1480415525986-qrdqmi'
+        webm_movie: '1351620000001-100240'
+    promotion_movie:
+      pipeline_id: '1474446076557-c1mpbd'
+      sqs_endpoint: 'https://sqs.ap-northeast-1.amazonaws.com/759549166074/elastic_transcoder_production'
+      preset_id:
+        mobile_movie: '1473999882571-7tqhn8'
+        web_movie: '1351620000001-100240'
+      uploadable_official_account_ids:
+        - 1
+  sns:
+    concierge:
+      topic_name: 'ConciergeProduction'
+  cognito:
+    identity_pool_id: <%= ENV['AWS_COGNITO_IDENTITY_POOL_ID'] %>
+    identity_provider_name: <%= ENV['AWS_COGNITO_IDENTITY_PROVIDER_NAME'] %>
+
+secrets:
+  secret_key_base: 678e9ca2c8f76fe901f6da484234ebd04224857fc0d90d0511b0fe90abb32f42d89501320249bb181af56183720214f4dae5c86202349633a982416424ce7b5f
+db:
+  default:
+    username: fa_w
+    password: <%= ENV['FINC_APP_DATABASE_WRITE_PASSWORD'] %>
+    host: fincapp-production-aurora.cluster-cdovlarfnsxf.ap-northeast-1.rds.amazonaws.com
+    port: 3306
+  genetic_test:
+    username: gt_r
+    password: <%= ENV['GENETIC_TEST_DATABASE_READ_PASSWORD'] %>
+    host: 172.32.8.69
+    port: 3306
+    database: genetic_test_production
+
+redis:
+  host: commonredis-prod.7cs73f.ng.0001.apne1.cache.amazonaws.com
+  port: 6379
+  namespace: <%= [Rails.application.class.parent_name, Rails.env].join(':') %>
+
+sidekiq:
+  redis:
+    host: 
+    port: 6379
+
+errbit:
+  api_key: d86080028c4299b9b0e3be76dff09866
+
+finc_services:
+  access_grants:
+    - Bu8qQPQ9YjcPWruoag_t_GRXxn9CyRmgPNG4DCJT
+    - 438378e54c112716d28679a629c9d8cb63acfc78ceb208c1b4f3303c4bef54a1
+    - 219bdc9725e75b85b94a1a40716732f5586212c7b5987d27a5db1d39876acfbe
+    - o2PtCedv5V1ATXAUTRsAf-9GhZ41Lx4E6AchCnzn_7tKc66k8uL1dfxH-pqcusZr
+    - QbzHKfuepna1NSRDiT1FN1FF_rQzcCEMR_9RDLF1Q51yKWwHd7qGU39NRPsDfwAf
+    - df47f6caedfa7051d9fe02994452cb50bb543bbb2c8614e576920e473bb41f47
+    - sQz27kJD1TUYAk_HTbuVbsotBGNo42xs9CaGe4HK
+    - <%= ENV['FI_CHAT_ACCESS_TOKEN'] %>
+    - SGdnz2zNnr1SiiJZD7F1Lpf3z8xBLDQhr3Xz_EJH
+    - r4k4ocNJzhHQbzbFTzrZnI1ImRgDnZdKMzpGgJ11lfbPVXuuBxqAbwKFRcoil4xI
+    - <%= ENV['FAM_ACCESS_GRANT'] %>
+    - <%= ENV['CAM_ACCESS_GRANT'] %>
+
+from_scratch:
+  sftp:
+    server_host: ftp.fs-bdash.com
+    username: bd_bmhqca_1
+    identity_key: /home/ubuntu/.ssh/f_scratch_rsa
+
+sb:
+  cindy:
+    client_id:
+    client_secret:
+    authentication:
+      fetch_code:
+        url: 'https://id.my.softbank.jp/sbid_auth/type1/2.0/authorization.php'
+        redirect_uri_for_sign_up: 'https://pksapp.finc.com/users/oauth/cindy/callback'
+        redirect_uri_for_sign_in: 'https://pksapp.finc.com/users/oauth/cindy_sign_in/callback'
+        redirect_uri_for_cancel: 'https://pksapp.finc.com/users/oauth/cindy/callback/cancel'
+      fetch_access_token:
+        url: 'https://ifapi.id.my.softbank.jp/sbid/2.0/sbid_token_endpoint/token'
+        redirect_uri: 'https://pksapp.finc.com/users/oauth/cindy/callback'
+      check_contracted:
+        url: 'https://ifapi.id.my.softbank.jp/sbid/2.0/sbid_token_endpoint/checktoken'
+    service:
+      contents_service_id: '139'
+      usage_status:
+        url: 'https://ifapi.id.my.softbank.jp/sgw/cdp/GetServiceUsageStatus'
+      start_billing:
+        url: 'https://ifapi.id.my.softbank.jp/sgw/cdp/StartBilling'
+      stop_billing:
+        url: 'https://ifapi.id.my.softbank.jp/sgw/cdp/StopBilling'
+  healthcare:
+    application_id:
+    summary:
+      url: 'https://healthcare.mb.softbank.jp/ext/v1/api/get_bodycomp_summary.php'
+    detail:
+      url: 'https://healthcare.mb.softbank.jp/ext/v1/api/get_ac_bodycomp_detail.php'
+    started:
+      url: 'https://healthcare.mb.softbank.jp/ext/v1/webview/login.php'
+      redirect_uri: 'https://pksapp.finc.com/sb/services/bodycomposition/started'
+    canceled:
+      url: 'https://healthcare.mb.softbank.jp/ext/v1/webview/logout.php'
+      redirect_uri: 'https://pksapp.finc.com/sb/services/bodycomposition/canceled'
+  sftp:
+    host: ftp0001
+    username: ubuntu
+    options:
+      identity_keys: '/home/ubuntu/.ssh/karada_support'
+      port: 22
+
+girls_award:
+  host: 'girls-award.finc.com'
+  protocol: 'https'
+
+controllers:
+  admin:
+    users:
+      wellness_mileages:
+        authenticate_admin_to_grant_mileage:
+          authenticated_admin_ids:
+            - 20120695
+            - 20120864
+
+laerdal:
+  application_token: <%= ENV['LAERDAL_ACCESS_TOKEN'] %>
+
+sbi_life:
+  tmp_user:
+    sign_up_with_email:
+      auth_token: <%= ENV['SBI_LIFE_TMP_USER_SIGN_UP_WITH_EMAIL_AUTH_TOKEN'] %>
+    new:
+      blank_mail:
+        mailto_address: 'sbi-apply@inbound.finc.com'
+
+sfdc:
+  help_url:
+    consumer_key: <%= ENV['SFDC_HELP_URL_CONSUMER_KEY'] %>
+    salt: <%= ENV['SFDC_HELP_URL_SALT'] %>
+    url: 'https://finc.secure.force.com/faq'
+
+pre_registration:
+  android_token:
+    authentication_token: <%= ENV['PRE_REGISTRATION_ANDROID_TOKEN_AUTHENTICATION_TOKEN'] %>
+  ios_token:
+    authentication_token: <%= ENV['PRE_REGISTRATION_IOS_TOKEN_AUTHENTICATION_TOKEN'] %>
+
+pre_registration_user:
+  authentication_token: <%= ENV['PRE_REGISTRATION_USER_AUTHENTICATION_TOKEN'] %>
+
+app_store:
+  user_invitations:
+    default:
+      ios_url: 'http://m.onelink.me/ac2b422e'
+      android_url: 'http://m.onelink.me/2df78755'
+    ambassador:
+      ios_url: 'http://m.onelink.me/158915d1'
+      android_url: 'http://m.onelink.me/30fe560b'
+    fincrew:
+      ios_url: 'http://m.onelink.me/577dba40'
+      android_url: 'http://m.onelink.me/936c10dd'
