@@ -60,3 +60,6 @@ gem 'raven-transports-fluentd'
 
 # ErrorBit
 gem 'airbrake', '~> 4.3.8'
+
+gem 'unicorn'
+gem 'request_id_logging'

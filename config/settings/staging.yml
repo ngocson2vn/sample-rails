@@ -257,7 +257,7 @@ errbit:
   api_key: 4c9a8ba8c4ee17ac0d20a7f746e865e8
 
 sentry:
-  dsn: 5184f25dd7b74d9c9f75a19c017f151b:0059cf4d52aa46e5a7d9b45cb69bf7e7
+  dsn: f45db6f07b0c454dab7c9aaf2af7e09b:418d9e3145984fe7b202f260adca3d75
 
 fluentd:
   host: staging-fluentd-sentry.finc.local

@@ -1,0 +1,291 @@
+I, [2017-04-28T15:52:55.645424 #39779]  INFO -- : Refreshing Gem list
+/Users/son/git/sample-rails/config/initializers/raven.rb:5:in `block in <top (required)>': undefined method `dsn' for nil:NilClass (NoMethodError)
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/sentry-raven-2.3.0/lib/raven/instance.rb:68:in `configure'
+	from /Users/son/git/sample-rails/config/initializers/raven.rb:4:in `<top (required)>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:287:in `load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:287:in `block in load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:287:in `load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:648:in `block in load_config_initializer'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/notifications.rb:166:in `instrument'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:647:in `load_config_initializer'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:612:in `block (2 levels) in <class:Engine>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:611:in `each'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:611:in `block in <class:Engine>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:228:in `block in tsort_each'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:422:in `block (2 levels) in each_strongly_connected_component_from'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:421:in `block in each_strongly_connected_component_from'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:415:in `call'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:415:in `each_strongly_connected_component_from'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:347:in `each'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:347:in `call'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:347:in `each_strongly_connected_component'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:226:in `tsort_each'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:205:in `tsort_each'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+	from /Users/son/git/sample-rails/config/environment.rb:5:in `<top (required)>'
+	from config.ru:4:in `require_relative'
+	from config.ru:4:in `block in <main>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/builder.rb:55:in `instance_eval'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn.rb:56:in `eval'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn.rb:56:in `block in builder'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:796:in `build_app!'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:139:in `start'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/bin/unicorn:126:in `<top (required)>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `<main>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-04-28T15:53:27.171166 #39793]  INFO -- : Refreshing Gem list
+/Users/son/git/sample-rails/config/initializers/raven.rb:5:in `block in <top (required)>': undefined method `dsn' for nil:NilClass (NoMethodError)
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/sentry-raven-2.3.0/lib/raven/instance.rb:68:in `configure'
+	from /Users/son/git/sample-rails/config/initializers/raven.rb:4:in `<top (required)>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:287:in `load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:287:in `block in load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:259:in `load_dependency'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/dependencies.rb:287:in `load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:648:in `block in load_config_initializer'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/notifications.rb:166:in `instrument'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:647:in `load_config_initializer'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:612:in `block (2 levels) in <class:Engine>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:611:in `each'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:611:in `block in <class:Engine>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `instance_exec'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:30:in `run'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:55:in `block in run_initializers'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:228:in `block in tsort_each'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:350:in `block (2 levels) in each_strongly_connected_component'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:422:in `block (2 levels) in each_strongly_connected_component_from'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:431:in `each_strongly_connected_component_from'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:421:in `block in each_strongly_connected_component_from'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `each'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:44:in `tsort_each_child'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:415:in `call'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:415:in `each_strongly_connected_component_from'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:349:in `block in each_strongly_connected_component'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:347:in `each'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:347:in `call'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:347:in `each_strongly_connected_component'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:226:in `tsort_each'
+	from /Users/son/.rvm/rubies/ruby-2.3.1/lib/ruby/2.3.0/tsort.rb:205:in `tsort_each'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/initializable.rb:54:in `run_initializers'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/application.rb:352:in `initialize!'
+	from /Users/son/git/sample-rails/config/environment.rb:5:in `<top (required)>'
+	from config.ru:4:in `require_relative'
+	from config.ru:4:in `block in <main>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/builder.rb:55:in `instance_eval'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/builder.rb:55:in `initialize'
+	from config.ru:1:in `new'
+	from config.ru:1:in `<main>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn.rb:56:in `eval'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn.rb:56:in `block in builder'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:796:in `build_app!'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:139:in `start'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/bin/unicorn:126:in `<top (required)>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `<main>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-04-28T15:54:19.731912 #39809]  INFO -- : Refreshing Gem list
+config.eager_load is set to nil. Please update your config/environments/*.rb files accordingly:
+
+  * development - set it to false
+  * test - set it to false (unless you use a tool that preloads your test environment)
+  * production - set it to true
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+F, [2017-04-28T15:54:21.513582 #39809] FATAL -- : error adding listener addr=/Users/son/git/sample-rails/shared/tmp/sockets/unicorn.sock
+/Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/socket_helper.rb:137:in `initialize': No such file or directory - connect(2) for /Users/son/git/sample-rails/shared/tmp/sockets/unicorn.sock (Errno::ENOENT)
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/socket_helper.rb:137:in `new'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/socket_helper.rb:137:in `bind_listen'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:241:in `listen'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:852:in `block in bind_new_listeners!'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:852:in `each'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:852:in `bind_new_listeners!'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:140:in `start'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/bin/unicorn:126:in `<top (required)>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `<main>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-04-28T15:55:48.540241 #39829]  INFO -- : Refreshing Gem list
+config.eager_load is set to nil. Please update your config/environments/*.rb files accordingly:
+
+  * development - set it to false
+  * test - set it to false (unless you use a tool that preloads your test environment)
+  * production - set it to true
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+F, [2017-04-28T15:55:50.245597 #39829] FATAL -- : error adding listener addr=/Users/son/git/sample-rails/shared/tmp/sockets/unicorn.sock
+/Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/socket_helper.rb:137:in `initialize': No such file or directory - connect(2) for /Users/son/git/sample-rails/shared/tmp/sockets/unicorn.sock (Errno::ENOENT)
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/socket_helper.rb:137:in `new'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/socket_helper.rb:137:in `bind_listen'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:241:in `listen'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:852:in `block in bind_new_listeners!'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:852:in `each'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:852:in `bind_new_listeners!'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:140:in `start'
+	from /Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/bin/unicorn:126:in `<top (required)>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `load'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `<main>'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	from /Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+I, [2017-04-28T15:57:23.027329 #39859]  INFO -- : Refreshing Gem list
+config.eager_load is set to nil. Please update your config/environments/*.rb files accordingly:
+
+  * development - set it to false
+  * test - set it to false (unless you use a tool that preloads your test environment)
+  * production - set it to true
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+I, [2017-04-28T15:57:24.710216 #39859]  INFO -- : listening on addr=/Users/son/git/sample-rails/shared/tmp/sockets/unicorn.sock fd=9
+I, [2017-04-28T15:57:26.149408 #39862]  INFO -- : worker=0 ready
+I, [2017-04-28T15:57:26.719458 #39859]  INFO -- : master process ready
+I, [2017-04-28T15:57:26.960270 #39863]  INFO -- : worker=1 ready
+I, [2017-04-28T15:59:44.028756 #39859]  INFO -- : SIGWINCH ignored because we're not daemonized
+I, [2017-04-28T16:00:11.171305 #39859]  INFO -- : reaped #<Process::Status: pid 39863 exit 0> worker=1
+I, [2017-04-28T16:00:11.171442 #39859]  INFO -- : reaped #<Process::Status: pid 39862 exit 0> worker=0
+I, [2017-04-28T16:00:11.173501 #39859]  INFO -- : master complete
+I, [2017-04-28T16:00:47.238370 #39944]  INFO -- : Refreshing Gem list
+config.eager_load is set to nil. Please update your config/environments/*.rb files accordingly:
+
+  * development - set it to false
+  * test - set it to false (unless you use a tool that preloads your test environment)
+  * production - set it to true
+
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "ActionDispatch::DebugExceptions" => ActionDispatch::DebugExceptions
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::Rails::Middleware" => Airbrake::Rails::Middleware
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+DEPRECATION WARNING: Passing strings or symbols to the middleware builder is deprecated, please change
+them to actual class references.  For example:
+
+  "Airbrake::UserInformer" => Airbrake::UserInformer
+
+ (called from <top (required)> at /Users/son/git/sample-rails/config/environment.rb:5)
+I, [2017-04-28T16:00:51.231594 #39944]  INFO -- : listening on addr=0.0.0.0:3000 fd=9
+I, [2017-04-28T16:00:52.701847 #39947]  INFO -- : worker=0 ready
+I, [2017-04-28T16:00:53.242938 #39944]  INFO -- : master process ready
+I, [2017-04-28T16:00:53.487423 #39948]  INFO -- : worker=1 ready
+127.0.0.1 - - [28/Apr/2017:16:01:16 +0900] "GET / HTTP/1.1" 200 - 0.2804
+ActionController::RoutingError: No route matches [GET] "/user"
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/rack/logger.rb:36:in `call_app'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/rack/logger.rb:24:in `block in call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/tagged_logging.rb:70:in `block in tagged'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/tagged_logging.rb:26:in `tagged'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/tagged_logging.rb:70:in `tagged'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/rack/logger.rb:24:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/request_id.rb:24:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/method_override.rb:22:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/runtime.rb:22:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/activesupport-5.0.0.1/lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/executor.rb:12:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/actionpack-5.0.0.1/lib/action_dispatch/middleware/static.rb:136:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/sendfile.rb:111:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/sentry-raven-2.3.0/lib/raven/integrations/rack.rb:50:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/airbrake-4.3.8/lib/airbrake/user_informer.rb:16:in `_call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/airbrake-4.3.8/lib/airbrake/user_informer.rb:12:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/railties-5.0.0.1/lib/rails/engine.rb:522:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/tempfile_reaper.rb:15:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/lint.rb:49:in `_call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/lint.rb:37:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/show_exceptions.rb:23:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/common_logger.rb:33:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/chunked.rb:54:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/rack-2.0.1/lib/rack/content_length.rb:15:in `call'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:606:in `process_client'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:702:in `worker_loop'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:549:in `spawn_missing_workers'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/lib/unicorn/http_server.rb:142:in `start'
+	/Users/son/.rvm/gems/ruby-2.3.1/gems/unicorn-5.3.0/bin/unicorn:126:in `<top (required)>'
+	/Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `load'
+	/Users/son/.rvm/gems/ruby-2.3.1/bin/unicorn:22:in `<main>'
+	/Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `eval'
+	/Users/son/.rvm/gems/ruby-2.3.1/bin/ruby_executable_hooks:15:in `<main>'
+127.0.0.1 - - [28/Apr/2017:16:01:23 +0900] "GET /user HTTP/1.1" 500 122177 0.1663
+127.0.0.1 - - [28/Apr/2017:16:01:28 +0900] "GET /users HTTP/1.1" 200 - 0.4287
+127.0.0.1 - - [28/Apr/2017:16:01:28 +0900] "GET /application-d12397cbc3a266ce5a99f7b588223090c55ca04a439953bb5f9304395de93fc3.css HTTP/1.1" 200 932 0.0108
+127.0.0.1 - - [28/Apr/2017:16:01:29 +0900] "GET /application-ef6e439c687ceb11b04b3c21e4794543e625e9e19edb4a01ccc5f0753fc8e133.js HTTP/1.1" 200 369084 0.3011
+127.0.0.1 - - [28/Apr/2017:16:01:46 +0900] "GET /users HTTP/1.1" 200 - 0.0302
+127.0.0.1 - - [28/Apr/2017:16:01:50 +0900] "GET /users/new HTTP/1.1" 200 - 0.1808
+127.0.0.1 - - [28/Apr/2017:16:01:58 +0900] "GET /users/new HTTP/1.1" 200 - 0.0284
+E, [2017-04-28T16:02:47.256894 #39944] ERROR -- : worker=1 PID:39948 timeout (61s > 60s), killing
+E, [2017-04-28T16:02:47.272621 #39944] ERROR -- : reaped #<Process::Status: pid 39948 SIGKILL (signal 9)> worker=1
+I, [2017-04-28T16:02:48.729539 #40019]  INFO -- : worker=1 ready
+E, [2017-04-28T16:03:05.705457 #39944] ERROR -- : worker=0 PID:39947 timeout (61s > 60s), killing
+E, [2017-04-28T16:03:05.722838 #39944] ERROR -- : reaped #<Process::Status: pid 39947 SIGKILL (signal 9)> worker=0
+I, [2017-04-28T16:03:34.037625 #39944]  INFO -- : reaped #<Process::Status: pid 40019 exit 0> worker=1
+I, [2017-04-28T16:03:34.037772 #39944]  INFO -- : master complete

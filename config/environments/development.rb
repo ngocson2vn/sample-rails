@@ -1,3 +1,5 @@
+require 'my_log_formatter'
+require 'my_trace_id'
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
 
@@ -51,4 +53,9 @@ Rails.application.configure do
   # Use an evented file watcher to asynchronously detect changes in source code,
   # routes, locales, etc. This feature depends on the listen gem.
   config.file_watcher = ActiveSupport::EventedFileUpdateChecker
+ 
+  config.log_level = :debug
+  config.logger = Logger.new("log/development.log", 5, 10 * 1024 * 1024)
+  config.logger.formatter = MyLogFormatter.new
+  config.middleware.insert_after ActionDispatch::RequestId, MyTraceId
 end
