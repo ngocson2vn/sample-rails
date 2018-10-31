@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @sample_action.name %>
+</p>
+
+<p>
+  <strong>Age:</strong>
+  <%= @sample_action.age %>
+</p>
+
+<%= link_to 'Edit', edit_sample_action_path(@sample_action) %> |
+<%= link_to 'Back', sample_actions_path %>

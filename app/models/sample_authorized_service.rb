@@ -1,0 +1,2 @@
+class SampleAuthorizedService < ApplicationRecord
+end

@@ -2,7 +2,7 @@ source 'https://rubygems.org'
 
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
+gem 'rails', '~> 5.1.0'
 # Use Puma as the app server
 gem 'puma', '~> 3.0'
 # Use SCSS for stylesheets
@@ -46,7 +46,7 @@ end
 
 group :production do
   gem 'pg', '0.18.4' 
-  ruby '2.3.1'
+  ruby '2.4.1'
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
@@ -59,7 +59,9 @@ gem 'sentry-raven'
 gem 'raven-transports-fluentd'
 
 # ErrorBit
-gem 'airbrake', '~> 4.3.8'
+#gem 'airbrake', '~> 4.3.8'
 
 gem 'unicorn'
-gem 'request_id_logging'
+#gem 'trace_id_logging', '~> 0.0.1', git: 'git@github.com:ngocson2vn/trace_id_logging.git'
+
+gem 'clientoken', path: '/Users/son/git/clientoken'

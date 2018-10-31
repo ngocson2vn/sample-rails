@@ -10,11 +10,40 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170215063804) do
+ActiveRecord::Schema.define(version: 20180424065623) do
+
+  create_table "clientoken_authorized_services", force: :cascade do |t|
+    t.string "application_name", null: false
+    t.string "old_application_token", null: false
+    t.datetime "valid_until", null: false
+    t.string "application_token", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["application_name"], name: "index_clientoken_authorized_services_on_application_name", unique: true
+    t.index ["application_token"], name: "index_clientoken_authorized_services_on_application_token", unique: true
+  end
+
+  create_table "sample_actions", force: :cascade do |t|
+    t.string "name"
+    t.integer "age"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "sample_authorized_services", force: :cascade do |t|
+    t.string "application_name"
+    t.string "old_application_token"
+    t.datetime "valid_until"
+    t.string "application_token"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["application_name"], name: "index_sample_authorized_services_on_application_name", unique: true
+    t.index ["application_token"], name: "index_sample_authorized_services_on_application_token", unique: true
+  end
 
   create_table "users", force: :cascade do |t|
-    t.string   "name"
-    t.string   "email"
+    t.string "name"
+    t.string "email"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

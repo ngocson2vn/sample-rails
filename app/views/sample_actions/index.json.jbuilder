@@ -1,0 +1,1 @@
+json.array! @sample_actions, partial: 'sample_actions/sample_action', as: :sample_action

@@ -1,0 +1,2 @@
+class SampleAction < ApplicationRecord
+end

@@ -1,0 +1,1 @@
+json.partial! "sample_actions/sample_action", sample_action: @sample_action
